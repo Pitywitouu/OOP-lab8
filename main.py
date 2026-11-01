@@ -1,3 +1,7 @@
+"""
+MSSV: 202418985
+Họ tên: Nguyễn Phú Thái
+"""
 import sys
 from models.enums import DeviceStatus, AlertSeverity
 from models.devices import ProjectorRemote, AirConditionerRemote, WirelessMicrophone
