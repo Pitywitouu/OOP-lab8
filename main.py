@@ -9,14 +9,13 @@ from monitoring.coordinator import DeviceMonitoringCoordinator
 from exceptions.device_exceptions import InvalidDeviceReadingException
 
 def print_header(title: str) -> None:
-    print(f"\n{'=' * 65}")
+    print(f"\n")
     print(f" {title.upper()}")
-    print(f"{'=' * 65}")
 
 def main() -> None:
     if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
         try:
-            sys.stdout.reconfigure(encoding="utf-8")  # type: ignore[attr-defined]
+            sys.stdout.reconfigure(encoding="utf-8") 
         except Exception:
             pass
 
@@ -123,7 +122,6 @@ def main() -> None:
     print(f"Số lượng log trước: {count_before}, sau: {len(audit_logger.entries)} (Chính xác!)")
 
     print("\nCHƯƠNG TRÌNH ĐÃ HOÀN THÀNH!")
-
 
 if __name__ == "__main__":
     main()
