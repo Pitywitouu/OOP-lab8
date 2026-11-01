@@ -1,10 +1,8 @@
 from datetime import datetime
 from .enums import DeviceStatus, AlertSeverity
 
-
 class EventArgs:
     pass
-
 
 class DeviceStatusChangedEventArgs(EventArgs):
     def __init__(

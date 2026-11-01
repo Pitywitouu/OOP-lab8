@@ -1,6 +1,5 @@
 from enum import Enum
 
-
 class DeviceStatus(str, Enum):
     Available = "Available"
     Borrowed = "Borrowed"
@@ -8,7 +7,6 @@ class DeviceStatus(str, Enum):
 
     def __str__(self) -> str:
         return self.value
-
 
 class AlertSeverity(str, Enum):
     Information = "Information"

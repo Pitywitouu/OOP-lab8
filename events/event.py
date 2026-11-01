@@ -1,6 +1,5 @@
 from typing import Any, Callable
 
-
 class Event:
     def __init__(self) -> None:
         self._handlers: list[Callable[[Any, Any], None]] = []

@@ -5,7 +5,6 @@ from exceptions.device_exceptions import InvalidDeviceReadingException
 from .enums import DeviceStatus, AlertSeverity
 from .event_args import DeviceStatusChangedEventArgs, DeviceAlertEventArgs
 
-
 class TeachingDevice(ABC):
     def __init__(self, id: str, name: str) -> None:
         self._id: str = id
@@ -89,7 +88,6 @@ class TeachingDevice(ABC):
     def __repr__(self) -> str:
         return f"<{self.__class__.__name__} id='{self._id}', name='{self._name}', status={self._status}>"
 
-
 class ProjectorRemote(TeachingDevice):
     def __init__(self, id: str, name: str, battery_level: int = 100) -> None:
         super().__init__(id, name)
@@ -128,7 +126,6 @@ class ProjectorRemote(TeachingDevice):
             pass
 
     UpdateBatteryLevel = update_battery_level
-
 
 class AirConditionerRemote(TeachingDevice):
     def __init__(
@@ -169,7 +166,6 @@ class AirConditionerRemote(TeachingDevice):
             )
 
     UpdateResponseState = update_response_state
-
 
 class WirelessMicrophone(TeachingDevice):
     def __init__(
