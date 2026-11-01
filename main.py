@@ -8,12 +8,10 @@ from services.filtered_subscriber import FilteredAlertSubscriber
 from monitoring.coordinator import DeviceMonitoringCoordinator
 from exceptions.device_exceptions import InvalidDeviceReadingException
 
-
 def print_header(title: str) -> None:
     print(f"\n{'=' * 65}")
     print(f" {title.upper()}")
     print(f"{'=' * 65}")
-
 
 def main() -> None:
     if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":

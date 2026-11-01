@@ -1,5 +1,8 @@
+from typing import Optional
+
+
 class InvalidDeviceReadingException(Exception):
-    def __init__(self, device_id: str, invalid_value: int, message: str | None = None) -> None:
+    def __init__(self, device_id: str, invalid_value: int, message: Optional[str] = None) -> None:
         self.device_id = device_id
         self.invalid_value = invalid_value
         if message is None:

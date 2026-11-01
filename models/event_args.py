@@ -1,8 +1,11 @@
 from datetime import datetime
+from typing import Optional
 from .enums import DeviceStatus, AlertSeverity
+
 
 class EventArgs:
     pass
+
 
 class DeviceStatusChangedEventArgs(EventArgs):
     def __init__(
@@ -10,7 +13,7 @@ class DeviceStatusChangedEventArgs(EventArgs):
         device_id: str,
         old_status: DeviceStatus,
         new_status: DeviceStatus,
-        changed_at: datetime | None = None,
+        changed_at: Optional[datetime] = None,
     ) -> None:
         self._device_id = device_id
         self._old_status = old_status
@@ -63,7 +66,7 @@ class DeviceAlertEventArgs(EventArgs):
         device_id: str,
         message: str,
         severity: AlertSeverity,
-        occurred_at: datetime | None = None,
+        occurred_at: Optional[datetime] = None,
     ) -> None:
         self._device_id = device_id
         self._message = message
